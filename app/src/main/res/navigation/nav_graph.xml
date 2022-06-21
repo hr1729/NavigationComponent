@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainfragment">
+
+    <fragment
+        android:id="@+id/mainfragment"
+        android:name="com.example.navigationcomponent.ui.mainfragment"
+        android:label="mainfragment" >
+        <action
+            android:id="@+id/action_mainfragment_to_chooseRecieptFragment2"
+            app:destination="@id/chooseRecieptFragment2" />
+        <action
+            android:id="@+id/action_mainfragment_to_viewTrascFragment"
+            app:destination="@id/viewTrascFragment" />
+        <action
+            android:id="@+id/action_mainfragment_to_viewBalancedFragment"
+            app:destination="@id/viewBalancedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseRecieptFragment2"
+        android:name="com.example.navigationcomponent.ui.chooseRecieptFragment"
+        android:label="chooseRecieptFragment" >
+        <action
+            android:id="@+id/action_chooseRecieptFragment2_to_specifyamntFragment"
+            app:destination="@id/specifyamntFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/specifyamntFragment"
+        android:name="com.example.navigationcomponent.ui.specifyamntFragment"
+        android:label="specifyamntFragment" >
+        <action
+            android:id="@+id/action_specifyamntFragment_to_confirmFragment"
+            app:destination="@id/confirmFragment" />
+        <argument
+            android:name="nme"
+            android:defaultValue="None" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmFragment"
+        android:name="com.example.navigationcomponent.ui.confirmFragment"
+        android:label="confirmFragment" >
+        <argument
+            android:name="nem"
+            android:defaultValue="none" />
+        <argument
+            android:name="money"
+            android:defaultValue="1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBalancedFragment"
+        android:name="com.example.navigationcomponent.ui.viewBalancedFragment"
+        android:label="viewBalancedFragment" />
+    <fragment
+        android:id="@+id/viewTrascFragment"
+        android:name="com.example.navigationcomponent.ui.viewTrascFragment"
+        android:label="viewTrascFragment" />
+</navigation>
